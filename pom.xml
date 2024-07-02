@@ -7,7 +7,7 @@
 	<name>Hadoop MapReduce</name>
 	<description>A Hadoop MapReduce example </description>
 	<groupId>edu.cs.utexas.HadoopEx</groupId>
-	<artifactId>MapReduce-WordCount-example</artifactId>
+	<artifactId>HourToGpsErrorCount</artifactId>
 	<version>0.1-SNAPSHOT</version>
 
 
@@ -36,8 +36,6 @@
 					<archive>
 						<manifest>
 							<mainClass>edu.cs.utexas.HadoopEx.HourToGpsErrorCount</mainClass>
-							<mainClass>edu.cs.utexas.HadoopEx.TaxiToGpsErrorRate</mainClass>
-							<mainClass>edu.cs.utexas.HadoopEx.TaxiToAvgEarnings</mainClass>
 						</manifest>
 					</archive>
 					<descriptorRefs>
