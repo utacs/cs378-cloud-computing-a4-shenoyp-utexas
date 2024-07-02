@@ -69,3 +69,5 @@ C9B9AE1B4267024D489995D8371BBB3B	5.555
 ![task3-1.png](task3-1.png)
 
 ![task3-2.png](task3-2.png)
+
+![dataproc.png](dataproc.png)
