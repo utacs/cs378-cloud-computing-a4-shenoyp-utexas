@@ -5,7 +5,7 @@ import org.apache.hadoop.mapreduce.Reducer;
 
 import java.io.IOException;
 
-public class HourOfGpsErrorReducer extends Reducer<IntWritable, IntWritable, IntWritable, IntWritable> {
+public class HourToGpsErrorCountReducer extends Reducer<IntWritable, IntWritable, IntWritable, IntWritable> {
   @Override
   protected void reduce(IntWritable hour, Iterable<IntWritable> counters, Context context)
       throws IOException, InterruptedException {

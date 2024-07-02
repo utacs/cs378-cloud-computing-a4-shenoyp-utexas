@@ -12,20 +12,20 @@ import org.apache.hadoop.mapreduce.lib.output.TextOutputFormat;
 import org.apache.hadoop.util.Tool;
 import org.apache.hadoop.util.ToolRunner;
 
-public class HourOfGpsError extends Configured implements Tool {
+public class HourToGpsErrorCount extends Configured implements Tool {
   public static void main(String[] args) throws Exception {
-    System.exit(ToolRunner.run(new Configuration(), new HourOfGpsError(), args));
+    System.exit(ToolRunner.run(new Configuration(), new HourToGpsErrorCount(), args));
   }
 
   @Override
   public int run(String[] args) throws Exception {
     Configuration conf = new Configuration();
 
-    Job job = new Job(conf, "HourOfGpsError");
-    job.setJarByClass(HourOfGpsError.class);
+    Job job = new Job(conf, "HourToGpsErrorCount");
+    job.setJarByClass(HourToGpsErrorCount.class);
 
-    job.setMapperClass(HourOfGpsErrorMapper.class);
-    job.setReducerClass(HourOfGpsErrorReducer.class);
+    job.setMapperClass(HourToGpsErrorCountMapper.class);
+    job.setReducerClass(HourToGpsErrorCountReducer.class);
 
     job.setOutputKeyClass(IntWritable.class);
     job.setOutputValueClass(IntWritable.class);

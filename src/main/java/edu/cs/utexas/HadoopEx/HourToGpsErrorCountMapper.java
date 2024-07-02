@@ -9,7 +9,7 @@ import java.time.DateTimeException;
 import java.time.format.DateTimeFormatter;
 import java.time.temporal.ChronoField;
 
-public class HourOfGpsErrorMapper extends Mapper<Object, Text, IntWritable, IntWritable> {
+public class HourToGpsErrorCountMapper extends Mapper<Object, Text, IntWritable, IntWritable> {
   private static final DateTimeFormatter datetimeFormatter = DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss");
   private static final int pickupDatetimeIndex = 3;
   private static final int[] gpsCoordinateIndices = new int[] {6, 7, 8, 9};
