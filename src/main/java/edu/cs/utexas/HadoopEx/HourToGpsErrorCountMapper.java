@@ -10,19 +10,22 @@ import java.time.format.DateTimeFormatter;
 import java.time.temporal.ChronoField;
 
 public class HourToGpsErrorCountMapper extends Mapper<Object, Text, IntWritable, IntWritable> {
+  private static final int expectedTokensCount = 17;
+
   private static final DateTimeFormatter datetimeFormatter = DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss");
+
   private static final int pickupDatetimeIndex = 3;
+
   private static final int[] gpsCoordinateIndices = new int[] {6, 7, 8, 9};
-  static int x = 0;
 
   private final IntWritable hour = new IntWritable(0);
+
   private final IntWritable counter = new IntWritable(1);
 
   @Override
   protected void map(Object key, Text value, Context context) throws IOException, InterruptedException {
     String[] tokens = value.toString().split(",");
 
-    final int expectedTokensCount = 17;
     if (tokens.length != expectedTokensCount) {
       return;
     }
