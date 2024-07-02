@@ -35,7 +35,9 @@
 				<configuration>
 					<archive>
 						<manifest>
-							<mainClass>edu.cs.utexas.HadoopEx.WordCount</mainClass>
+							<mainClass>edu.cs.utexas.HadoopEx.HourToGpsErrorCount</mainClass>
+							<mainClass>edu.cs.utexas.HadoopEx.TaxiToGpsErrorRate</mainClass>
+							<mainClass>edu.cs.utexas.HadoopEx.TaxiToAvgEarnings</mainClass>
 						</manifest>
 					</archive>
 					<descriptorRefs>
